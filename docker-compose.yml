@@ -18,5 +18,10 @@ services:
       - MONGO_INITDB_ROOT_PASSWORD=root
       - MONGO_INITDB_DATABASE=node-app
     volumes:
-      - ./data/db:/data/db
+      - mongo-volumne:/data/db
     
+volumes:
+  mongo-volumne:
+    driver: local
+    driver_opts:
+      device: /dev/db

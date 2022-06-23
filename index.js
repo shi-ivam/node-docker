@@ -13,7 +13,7 @@ mongoose.connect('mongodb://root:root@mongo:27017', { useNewUrlParser: true }).t
 })
 
 app.get('/',(req,res) => {
-    res.send('Hello World : ' + statu)
+    res.send('Hello World : ' + status)
 })
 
 const PORT = process.env.PORT || 5000;
